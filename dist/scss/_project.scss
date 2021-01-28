@@ -1,0 +1,115 @@
+.projects{
+    align-items: center;
+    text-align: center;
+
+    @include mobile(){
+    padding-bottom: 2rem;
+
+    };
+
+    &__bio-image{
+        background: 
+        linear-gradient(
+            to right,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.5)
+        ),
+    url('../main/img/model-1.jpg') center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    }
+    &__bio-text{
+        font-size: 2rem;
+        .text-secondary{
+            margin-bottom: 2rem;
+        }
+    }
+    .projectArea{
+        display: flex;
+        width: 60%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+        justify-content: center;
+        .project{
+            border-bottom: 5px solid $secondary-color;
+            max-width: 350px;
+            margin: .9rem;
+            position: relative;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+
+            @include tablet(){
+                width: 270px;
+            }
+
+            img{
+                width: 100%;
+            }
+            .git-view{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                visibility: hidden;
+                z-index: 2;
+                display: flex;
+                justify-content: space-evenly;
+                span a{
+                    color: #000;
+                }
+
+            }
+        }
+        .orange-hover{
+            background-color: #ff6527;
+            opacity: .7;
+            transition: all .5s ease-in-out;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            height: 0;
+            visibility: hidden;
+           
+        }
+        :hover{
+            & .orange-hover{
+                background-color: #ff6527;
+                opacity: .9;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0; 
+                transition: all .5s ease-in-out;
+                visibility: visible;
+            }
+            & .git-view{
+                visibility: visible;
+                display: flex;
+                justify-content: space-around;
+                i.fas.fa-eye, i.fab.fa-github{
+                    color: #000;
+                }
+                :hover{
+                    i.fas.fa-eye, i.fab.fa-github, a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        
+       
+    }
+    .social-icons{
+        div{
+            margin-bottom: 1rem;
+        }
+    }
+    footer{
+        transform: rotate(90deg) translate(-3rem, -4.5rem);
+    }
+}

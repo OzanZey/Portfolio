@@ -1,0 +1,91 @@
+.contact{
+    align-items: center;
+    text-align: center;
+
+        background: 
+        linear-gradient(
+            to right,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.5)
+        ),
+    url('../main/img/model-1.jpg') center top;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include  mobile {
+        align-items: center;
+        text-align: center;
+    
+            background: 
+            linear-gradient(
+                to right,
+                rgba($primary-color, 0.9),
+                rgba($primary-color, 0.6)
+            ),
+        url('../main/img/model-1.jpg') center top;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .contact__content{
+            margin-bottom: 0rem !important;
+        }
+    }
+    @include  mobile-xs {
+        align-items: center;
+        text-align: center;
+    
+            background: 
+            linear-gradient(
+                to right,
+                rgba($primary-color, 0.9),
+                rgba($primary-color, 0.6)
+            ),
+        url('../main/img/model-1.jpg') center top;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .contact__content{
+            margin-bottom: 0rem !important;
+        }
+    }
+    .contact__content{
+        margin-bottom: 15rem;
+  
+        .contactArea{
+            display: flex;
+            justify-content: center;
+            flex-flow: wrap;
+            .e-mail, .phone, .adress{
+                text-align: start;
+                margin-right: 3rem;
+                font-size: 1.5rem;
+                @include mobile{
+                    margin-bottom: 2rem;
+                    font-size: 1.3rem;
+                    margin-left: .5rem;
+                }
+            }
+            @include mobile{ 
+                justify-content: normal; 
+            }
+        }
+        .contact-social-icons{
+            margin-top: 2rem;
+            a{
+                margin-right: 1rem;
+            }:hover{
+                color: $secondary-color;
+            }
+        }
+    }&__content p{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+   
+}

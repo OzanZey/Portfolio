@@ -1,0 +1,36 @@
+.home{
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden; //no scroll bar
+    align-items: center;
+    text-align: center;
+    background: 
+        linear-gradient(
+            to right,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.6)
+        ),
+    url('../main/img/model-1.jpg') center;
+    background-size: cover;
+    @include mobile{
+        padding-top: 30vh;
+    }
+    @include mobile-xs{
+        padding-top: 30vh;
+    }
+    &__name{
+        font-size: 5rem;
+        padding-bottom: 1rem;
+        margin: 0 0 1rem 0;  
+        border-bottom: 2px solid set-text-color($primary-color); 
+        @include mobile-xs{
+            font-size: 3rem;
+        }
+
+        &--last{
+            color: $secondary-color;
+            font-weight: 700;
+        }
+    }
+}
+ 
